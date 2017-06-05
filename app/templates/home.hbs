@@ -1,0 +1,9 @@
+<ul>
+  {{#each model.issues as |issue|}}
+    <li>{{issue.url}}</li>
+  {{/each}}
+</ul>
+
+<button {{action 'testik'}}>LOAD</button>
+<button {{action 'del'}}>DEL</button>
+<button {{action 'cret'}}>POST</button>
