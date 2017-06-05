@@ -7,7 +7,50 @@ const httpMethods = {
   put: 'httpPut',
   delete: 'httpDelete'
 };
+/**
+ * resourseBuilder - method which convert resource object to Ember service mixin
+ * 
+ * Input:
+ * 
+ * {
+  getAllIssues: {
+    url: '/repos/vmg/redcarpet/issues',
+    type: 'get',
+    useCache: true,
+    cacheTimeout: 6000,
+    //resetCaches: ['getAllIssues'] //also could be used to reset cache
+  },
+  newIssue: {
+    url: '/',
+    type: 'post',
+    resetCaches: ['getAllIssues']
+  }
 
+  Output:
+
+ * 
+ * {
+  getAllIssues(url, data, cacheData){
+    //save to cache or get from cache
+
+    return this.http.get({
+      url: `${this.get('host')}${url}`, 
+      data: data.query, 
+      headers: data.headers
+    }).then(response => {
+      this.setCache(cacheData, response);
+      return response;
+    })
+  },
+  newIssue(url, data, headers) {
+    // remove caches -  ['getAllIssues']
+    return this.http.post({
+      url: `${this.get('host')}${url}`, 
+      data: data.data, 
+      headers: data.headers
+    });
+  }
+ */
 export const resourseBuilder = resourses => {
   const methods = {};
   each(resourses, (methodName, config) => {
