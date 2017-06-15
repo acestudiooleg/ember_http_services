@@ -25,6 +25,7 @@
     "ember-cli-htmlbars": "^1.1.1",
     "ember-cli-htmlbars-inline-precompile": "^0.4.0",
     "ember-cli-inject-live-reload": "^1.4.1",
+    "ember-cli-moment-shim": "^3.3.1",
     "ember-cli-qunit": "^4.0.0",
     "ember-cli-shims": "^1.1.0",
     "ember-cli-sri": "^2.1.0",
@@ -32,14 +33,26 @@
     "ember-data": "^2.13.0",
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.0.0",
+    "ember-moment": "^7.3.1",
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.13.0",
     "ember-welcome-page": "^3.0.0",
     "loader.js": "^4.2.3",
-    "mirage": "0.0.6"
+    "mirage": "0.0.6",
+    "moment": "^2.18.1",
+    "sequelize": "^4.1.0",
+    "sqlite3": "^3.1.8"
   },
   "engines": {
     "node": ">= 4"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "moment": "^2.18.1",
+    "morgan": "^1.8.2",
+    "orm": "^3.2.3",
+    "q-orm": "0.0.3"
+  }
 }

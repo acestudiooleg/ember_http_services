@@ -1,4 +1,3 @@
-import Ember from 'ember';
 import Httpservice, {resourseBuilder} from './httpservice';
 
 const service = {
@@ -14,7 +13,7 @@ const generalConfig = {
 
 const resourse = resourseBuilder({
   getAllIssues: {
-    url: '/repos/vmg/redcarpet/issues',
+    url: '/repos/vmg/redcarpet/issues22',
     type: 'get',
     useCache: true,
     cacheTimeout: 6000,
